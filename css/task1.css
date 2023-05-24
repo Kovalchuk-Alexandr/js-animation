@@ -1,0 +1,133 @@
+.container {
+  width: 780px;
+  height: 400px;
+  /* margin: 20px 20px; */
+  border: 1px solid silver;
+  background: bisque;
+
+  /* position: absolute; */
+
+  display: flex;
+  /* flex-wrap: wrap; перенос на новую строку */
+  justify-content: space-around; /*выравнивание */
+  /* flex-direction: row-reverse;*/
+  flex-direction: column;
+
+  /* по-умолчанию, блоки расстянуты по высоте до размера большего блока*/
+  /* align-items: stretch;  */
+
+  /* Выравнивание по верху, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-start; */
+
+  /* Выравнивание по низу, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-end; */
+
+  /* Выравнивание по базовой линии, низ - по размеру текста (заполнения)*/
+  /* align-items: baseline; */
+
+  /* Выравнивание по центру, низ - по размеру текста (заполнения)*/
+  align-items: center;
+}
+
+.container1,
+.container2 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.box {
+  flex-basis: 150px; /* аналог width: 100px;*/
+  height: 150px;
+  background: #ff7f50;
+  color: beige;
+  border: 1px solid black;
+}
+
+.box1 {
+  transform: skewX(15deg);
+  transition: all 0.7s ease;
+  box-shadow: -20px 20px 5px gray;
+}
+
+.box1 img {
+  width: 100%;
+}
+
+.box2 {
+  animation: coolAnimation 4s linear infinite alternate;
+}
+
+.box1:hover {
+  position: relative;
+  cursor: pointer;
+  transform: skewX(0deg);
+  box-shadow: 0px 0px;
+}
+
+/* объявляем анимацию*/
+@keyframes Animation-1 {
+  from {
+    top: 0px;
+    left: 0px;
+  }
+  to {
+    top: 124px;
+    left: 100px;
+  }
+}
+
+/* The parameters are as follow:
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+@keyframes mymove1 {
+  50% {
+    transform: matrix(1.4, 0.75, -0.75, 1.4, 10, 10);
+  }
+}
+
+/* объявляем анимацию*/
+@keyframes block {
+  from {
+    background: blanchedalmond;
+  }
+  to {
+    background: darkorchid;
+  }
+}
+
+@keyframes coolAnimation {
+  0% {
+    border-radius: 0px;
+    border: 1px solid silver;
+    transform: scale(0.05, 0.05);
+  }
+  10% {
+    border-radius: 10%;
+    border: 3px solid silver;
+    transform: scale(0.1, 0.1);
+  }
+  40% {
+    border-radius: 40%;
+    border: 5px solid silver;
+    transform: scale(0.4, 0.4);
+  }
+  70% {
+    border-radius: 100%;
+    border: 7px solid silver;
+    background: darkorchid;
+    transform: scale(0.7, 0.7);
+  }
+  100% {
+    border-radius: 15px;
+    border: 2px solid silver;
+  }
+}
+
+/* animation: Shadow; */
+/* animation: mymove 4s infinite alternate; */
+/* animation-name: Animation-1; */
+/* animation-duration: 2s; продолжительность анимации */
+/* animation-delay: 0.2s; задержка, после загрузки страницы */
+/* animation-iteration-count: infinite; количество повторов */
+/* animation-direction: alternate; маятник */

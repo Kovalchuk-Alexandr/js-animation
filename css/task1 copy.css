@@ -1,0 +1,236 @@
+.container {
+  width: 780px;
+  height: 400px;
+  /* margin: 20px 20px; */
+  border: 1px solid silver;
+  background: bisque;
+
+  /* position: absolute; */
+
+  display: flex;
+  /* flex-wrap: wrap; перенос на новую строку */
+  justify-content: space-around; /*выравнивание */
+  /* flex-direction: row-reverse;*/
+  flex-direction: column;
+
+  /* по-умолчанию, блоки расстянуты по высоте до размера большего блока*/
+  /* align-items: stretch;  */
+
+  /* Выравнивание по верху, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-start; */
+
+  /* Выравнивание по низу, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-end; */
+
+  /* Выравнивание по базовой линии, низ - по размеру текста (заполнения)*/
+  /* align-items: baseline; */
+
+  /* Выравнивание по центру, низ - по размеру текста (заполнения)*/
+  align-items: center;
+}
+
+.container1,
+.container2 {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  /* padding: 10px;
+    border: 2px solid silver;
+    margin-bottom: 10px ;
+    flex-basis: 30%; */
+}
+
+.box {
+  /* margin-top: 20px; */
+  flex-basis: 150px; /* аналог width: 100px;*/
+  height: 150px;
+  background: #ff7f50;
+  color: beige;
+  border: 1px solid black;
+}
+
+.box1 {
+  transform: skewX(15deg);
+  transition: all 0.7s ease;
+  box-shadow: -20px 20px 5px gray;
+}
+.box1 img {
+  width: 100%;
+}
+.box2 {
+  animation: coolAnimation 4s linear infinite alternate;
+}
+
+.box-1 {
+  /* background-image: url("img/1670401826-2.jpg") 0 0; */
+  background-image: url("../img/1670401826-2.jpg");
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9587d1+0,ff7f50+100 */
+  background: #9587d1; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #9587d1 0%,
+    #ff7f50 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #9587d1 0%,
+    #ff7f50 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #9587d1 0%,
+    #ff7f50 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9587d1', endColorstr='#ff7f50',GradientType=0 ); /* IE6-9 */
+
+  /* align-self: flex-start;  дополнительное выравнивавние одного эл-та */
+}
+
+.box1:hover {
+  position: relative;
+  cursor: pointer;
+  transform: skewX(0deg);
+  box-shadow: 0px 0px;
+}
+
+.box-2 {
+  background: url(img/1670401831_kartinkof-club-p-kartinki-neobichnie-so-smislom-7.jpg)
+    0 0;
+  z-index: 100;
+}
+.box-3 {
+  /* flex: 1; */
+  order: 0;
+  /* background: #5f9ea0; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5f9ea0+0,51edff+100 */
+  background: #5f9ea0; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #5f9ea0 0%,
+    #51edff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #5f9ea0 0%,
+    #51edff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #5f9ea0 0%,
+    #51edff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f9ea0', endColorstr='#51edff',GradientType=0 ); /* IE6-9 */
+}
+
+.box-4 {
+  /* order: 1; */
+  /* align-self: flex-end; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff895e+1,f44c22+100 */
+  background: #ff895e; /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #ff895e 1%,
+    #f44c22 100%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #ff895e 1%,
+    #f44c22 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    #ff895e 1%,
+    #f44c22 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff895e', endColorstr='#f44c22',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.box-4:hover {
+  cursor: pointer;
+  animation: mymove 4s liner infinite alternate;
+}
+
+/* объявляем анимацию*/
+@keyframes Animation-1 {
+  from {
+    top: 0px;
+    left: 0px;
+  }
+  to {
+    top: 124px;
+    left: 100px;
+    /* .text {display: block;} */
+  }
+}
+@keyframes Shadow {
+  50% {
+    box-shadow: 0px 0px gray;
+  }
+}
+
+/* The parameters are as follow:
+matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+@keyframes mymove1 {
+  50% {
+    transform: matrix(1.4, 0.75, -0.75, 1.4, 10, 10);
+  }
+}
+
+@keyframes mymove {
+  from {
+    transform: matrix(1.1, 1, -0.45, 1.1, 1, 1);
+  }
+  to {
+    transform: matrix(1.1, 1, 1, 1.1, 1, 1);
+  }
+}
+
+/* объявляем анимацию*/
+@keyframes block {
+  from {
+    background: blanchedalmond;
+  }
+  to {
+    background: darkorchid;
+  }
+}
+
+@keyframes coolAnimation {
+  0% {
+    border-radius: 0px;
+    border: 1px solid silver;
+    transform: scale(0.05, 0.05);
+  }
+  10% {
+    border-radius: 10%;
+    border: 3px solid silver;
+    transform: scale(0.1, 0.1);
+  }
+  40% {
+    border-radius: 40%;
+    border: 5px solid silver;
+    transform: scale(0.4, 0.4);
+  }
+  70% {
+    border-radius: 100%;
+    border: 7px solid silver;
+    background: darkorchid;
+    transform: scale(0.7, 0.7);
+  }
+  100% {
+    border-radius: 15px;
+    border: 2px solid silver;
+  }
+}
+
+/* animation: Shadow; */
+/* animation: mymove 4s infinite alternate; */
+/* animation-name: Animation-1; */
+/* animation-duration: 2s; продолжительность анимации */
+/* animation-delay: 0.2s; задержка, после загрузки страницы */
+/* animation-iteration-count: infinite; количество повторов */
+/* animation-direction: alternate; маятник */

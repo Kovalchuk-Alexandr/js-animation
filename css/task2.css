@@ -1,0 +1,87 @@
+.container {
+  width: 780px;
+  height: 400px;
+  /* margin: 20px 20px; */
+  border: 1px solid silver;
+  background: #ffe4c4;
+  position: absolute;
+
+  /* position: absolute; */
+
+  /* display: flex; */
+  /* flex-wrap: wrap; перенос на новую строку */
+  /* justify-content: space-around; выравнивание */
+  /* flex-direction: row-reverse;*/
+  /* flex-direction: column; */
+
+  /* по-умолчанию, блоки расстянуты по высоте до размера большего блока*/
+  /* align-items: stretch;  */
+
+  /* Выравнивание по верху, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-start; */
+
+  /* Выравнивание по низу, низ - по размеру текста (заполнения)*/
+  /* align-items: flex-end; */
+
+  /* Выравнивание по базовой линии, низ - по размеру текста (заполнения)*/
+  /* align-items: baseline; */
+
+  /* Выравнивание по центру, низ - по размеру текста (заполнения)*/
+  /* align-items: center; */
+}
+
+.button,
+.msg button {
+  width: 130px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  background: #a52323;
+  border: 2px solid coral;
+  color: cornsilk;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.counter {
+  display: none;
+  width: 130px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  background: #f1d1a1;
+  border: 2px solid coral;
+  color: #a52323;
+  transition: all 500ms ease;
+}
+
+.msg {
+  display: none;
+  width: 200px;
+  position: relative;
+  top: 15%;
+  left: 35%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  background: #f1d1a1;
+  border: 2px solid coral;
+  color: #a52323;
+  transition: all 500ms ease;
+}
+
+.msg button {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+}
